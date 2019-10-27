@@ -1,0 +1,7 @@
+<h2>Superheroes</h2>
+
+<div class="list-wrapper">
+    <a *ngFor="let item of list" href="/superheroes/{{item.id}}/show">
+        {{item.heroName}}
+    </a>
+</div>

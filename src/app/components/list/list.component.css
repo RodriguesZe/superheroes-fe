@@ -1,0 +1,18 @@
+.list-wrapper a {
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000!important;
+    background-color: #f1f1f1!important;
+}
+
+.list-wrapper a:hover {
+    background-color: #ccc!important;
+}
+
