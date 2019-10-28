@@ -38,3 +38,19 @@ button {
     background-color: #ccc!important;
 }
 
+@media screen and (max-width: 600px) {
+  .search {
+    float: none;
+  }
+  .search input[type=text], .search button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .search input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
