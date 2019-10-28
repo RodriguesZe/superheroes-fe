@@ -58,6 +58,10 @@ a:hover {
     color: #125699;
 }
 
+.home-a, .home-a:visited, .home-a:hover {
+    color: #fff;
+}
+
 footer {
     margin-top: 20px;
     display: flex;
