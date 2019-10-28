@@ -17,3 +17,22 @@
     font-style: italic;
     font-weight: bold;
 }
+
+.form-wrapper {
+    display: inline-block;
+}
+
+.title-header h2 {
+    float: left;
+    padding: 0.3em 0.6em;
+}
+
+.title-header button {
+    float: left;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    margin: 1em 0em;
+}

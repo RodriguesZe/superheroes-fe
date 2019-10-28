@@ -1,39 +1,43 @@
 <div class="wrapper" *ngIf="superhero">
 
-    <h2>{{superhero.heroName | uppercase}}</h2>
+    <div class="title-header">
+        <h2>{{superhero.heroName | uppercase}}</h2>
+        <button *ngIf="disable" (click)="toggleDisable()">Edit</button>
+        <button *ngIf="!disable" (click)="saveSuperhero()">Save</button>
+    </div>
 
-    <div class="row">
-        <div class="half-col">
-            <div class="item-container">
-                <label>Real Name: </label>
-                <span>{{superhero.realName}}</span>
-                <!-- col-sm-10 -->
+    <div class="form-wrapper">
+        <form [formGroup]="superheroData">
+            <div class="row">
+                <div class="half-col">
+                    <div class="item-container">
+                        <label>Real Name: </label>
+                        <input type="text" formControlName="realName">
+                    </div>
+                </div>
+        
+                <div class="half-col">
+                    <div class="item-container">
+                        <label>Hero Name: </label>
+                        <input type="text" formControlName="heroName">
+                    </div>
+                </div>
+        
+                <div class="half-col">
+                    <div class="item-container">
+                        <label>Publisher: </label>
+                        <input type="text" formControlName="publisher">
+                    </div>
+                </div>
+        
+                <div class="half-col">
+                    <div class="item-container">
+                        <label>First Appearance: </label>
+                        <input type="text" formControlName="firstAppearance">
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="half-col">
-            <div class="item-container">
-                <label>Hero Name: </label>
-                <span>{{superhero.heroName}}</span>
-                <!-- col-sm-10 -->
-            </div>
-        </div>
-
-        <div class="half-col">
-            <div class="item-container">
-                <label>Publisher: </label>
-                <span>{{superhero.publisher}}</span>
-                <!-- col-sm-10 -->
-            </div>
-        </div>
-
-        <div class="half-col">
-            <div class="item-container">
-                <label>First Appearance: </label>
-                <span>{{superhero.firstAppearance}}</span>
-                <!-- col-sm-10 -->
-            </div>
-        </div>
+        </form>
     </div>
 
     <div class="row">

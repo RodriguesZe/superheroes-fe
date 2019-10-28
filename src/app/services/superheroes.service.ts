@@ -18,10 +18,16 @@ export class SuperheroesService {
 
     return this.httpClient.get(url).toPromise();
   }
-
   public show(id: string): Promise<any> {
     const url = 'http://localhost:8888/api/superheroes/' + id;
 
     return this.httpClient.get(url).toPromise();
+  }
+
+  public update(id: string, payload)
+  {
+    const url = 'http://localhost:8888/api/superheroes/' + id;
+
+    return this.httpClient.put(url, payload).toPromise();
   }
 }

@@ -10,7 +10,13 @@ const routes: Routes = [
   },
   {
     path: 'superheroes/:id/show',
-    component: ShowComponent
+    component: ShowComponent,
+    data: { edit: false }
+  },
+  {
+    path: 'superheroes/:id/edit',
+    component: ShowComponent,
+    data: {edit: true}
   }
 ];
 
