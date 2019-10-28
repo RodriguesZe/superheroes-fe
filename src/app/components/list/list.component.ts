@@ -9,11 +9,16 @@ import { SuperheroesService } from '../../services/superheroes.service';
 export class ListComponent implements OnInit {
 
   public list = [];
+  public query = '';
 
   constructor(public heroes: SuperheroesService) { }
 
   async ngOnInit() {
-    const response = await this.heroes.list();
+    this.search();
+  }
+
+  async search() {
+    const response = await this.heroes.list(this.query);
 
     const condition: boolean = response.hasOwnProperty('data');
 

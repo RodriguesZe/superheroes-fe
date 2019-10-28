@@ -1,3 +1,25 @@
+h2 {
+    text-align: center;
+}
+
+.search {
+    padding: 1em 0;
+}
+
+.search input[type=text] {
+    font-size: 17px;
+    padding: 0.5em;
+}
+
+button {
+    float: right;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    padding: 0.62em;
+}
+
 .list-wrapper a {
     display: block;
     padding: 8px 16px;

@@ -1,5 +1,12 @@
 <h2>Superheroes</h2>
 
+<div class="search">
+    <form (ngSubmit)="search()">
+        <input [(ngModel)]="query" type="text" placeholder="Search by name..." name="search">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
 <div class="list-wrapper">
     <a *ngFor="let item of list" href="/superheroes/{{item.id}}/show">
         {{item.heroName}}

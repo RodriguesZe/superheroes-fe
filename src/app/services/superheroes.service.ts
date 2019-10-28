@@ -9,7 +9,14 @@ export class SuperheroesService {
   constructor(private httpClient: HttpClient) { }
 
   public list(query?: string): Promise<any> {
-    return this.httpClient.get('http://localhost:8888/api/superheroes').toPromise();
+    let url = 'http://localhost:8888/api/superheroes';
+
+    if( query !== '' )
+    {
+      url = url + '?name=' + query;
+    }
+
+    return this.httpClient.get(url).toPromise();
   }
 
   public show(id: string): Promise<any> {
