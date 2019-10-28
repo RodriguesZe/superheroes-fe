@@ -6,10 +6,12 @@ import {HttpClient} from '@angular/common/http';
 })
 export class SuperheroesService {
 
+  public baseUrl: string = 'http://localhost:8888/api/';
+
   constructor(private httpClient: HttpClient) { }
 
   public list(query?: string): Promise<any> {
-    let url = 'http://localhost:8888/api/superheroes';
+    let url = this.baseUrl + 'superheroes';
 
     if( query !== '' )
     {
@@ -19,14 +21,13 @@ export class SuperheroesService {
     return this.httpClient.get(url).toPromise();
   }
   public show(id: string): Promise<any> {
-    const url = 'http://localhost:8888/api/superheroes/' + id;
+    const url = this.baseUrl + 'superheroes/' + id;
 
     return this.httpClient.get(url).toPromise();
   }
 
-  public update(id: string, payload)
-  {
-    const url = 'http://localhost:8888/api/superheroes/' + id;
+  public update(id: string, payload) {
+    const url = this.baseUrl + 'superheroes/' + id;
 
     return this.httpClient.put(url, payload).toPromise();
   }
