@@ -1,0 +1,19 @@
+.wrapper {
+    padding: 2em !important;
+    width: 90%;
+}
+
+.row {
+    margin: 1em 0.2em;
+}
+
+.half-col {
+    width: 50%;
+    float: left;
+    padding-bottom: 1em;
+}
+
+.item-container label {
+    font-style: italic;
+    font-weight: bold;
+}
