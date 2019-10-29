@@ -35,7 +35,7 @@ export class ShowComponent implements OnInit {
     if (!!condition) {
       this.superhero = response.data;
 
-      if (this.superhero.firstAppearance !== null) {
+      if (this.superhero.hasOwnProperty('firstAppearance') && this.superhero.firstAppearance !== null) {
         this.superhero.firstAppearance = this.parseDate(this.superhero.firstAppearance);
       }
 
@@ -48,7 +48,7 @@ export class ShowComponent implements OnInit {
   }
 
   async saveSuperhero() {
-    let payload = this.superheroData.value;
+    const payload = this.superheroData.value;
     
     payload.firstAppearance = this.parseFullDate(payload.firstAppearance);
 
@@ -76,7 +76,7 @@ export class ShowComponent implements OnInit {
     const minutes = ('0' + dateToParse.getMinutes()).slice(-2);
     const seconds = ('0' + dateToParse.getSeconds()).slice(-2);
 
-    return `${date} ${hours}:${minutes}:${seconds}`
+    return `${date} ${hours}:${minutes}:${seconds}`;
   }
 
   private parseDate(dateField: string) {
@@ -92,6 +92,6 @@ export class ShowComponent implements OnInit {
     const month = ('0' + fixedMonth).slice(-2);
     const day = ('0' + dateObject.getDate()).slice(-2);
 
-    return `${year}-${month}-${day}`
+    return `${year}-${month}-${day}`;
   }
 }
