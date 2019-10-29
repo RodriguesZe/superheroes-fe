@@ -1,27 +1,65 @@
-# SuperheroesFe
+# Superheroes Backoffice
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
+This is an single page application (SPA), running on top of Angular CLI, version 8.3.14. The main goals were:
 
-## Development server
+* Code that is clean, readable and easy to maintain.
+* Code organization following the framework advised best practices.
+* Recognize and implement logic that can show case what can be done in app like this.
+* Focus on interaction with the API and code best practices. 
+* HTML and CSS good practices were a concern. Design (aka making it pretty) was not.
+ 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features available
 
-## Code scaffolding
+* **List superheroes**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Lists the superheroes by superhero name. More details about the superhero upon clicking on the superhero name.
+
+* **Search superheroes**
+
+Simple search bar that goes requests the API for superheroes with the requested query. It will lookup for both real and hero name fields.
+
+* **Show and edit superheroes**
+
+Same view, with some JS code to showcase how this logic could be handled. 
+
+It displays all the info related to a superhero.
+
+It's only possible to edit the superhero details (names, publisher and first appearance) in order to not over complicate the update endpoint on the API. 
+
+
+## Run it locally    
+
+### Requirements
+* NodeJS
+* npm
+* Superheroes API running and available at `http://localhost:8888/api/` (read more about it [here](`https://github.com/RodriguesZe/superheroes-api`))
+
+### Setup
+
+1. Clone repository to <PATH_TO_REPO_ROOT>
+
+2. Install Angular CLI (skip if already installed globally)
+
+```zsh
+npm install -g @angular/cli
+```
+
+3. Install dependencies
+
+```zsh
+npm install
+```
+
+4. Serve 
+
+```zsh
+ng serve
+```
+
+5. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
