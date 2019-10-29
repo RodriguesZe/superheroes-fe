@@ -10,7 +10,14 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class ShowComponent implements OnInit {
 
-  public superhero = [];
+  public superhero = {
+    realName: '',
+    heroName: '',
+    publisher: '',
+    firstAppearance: '',
+    abilities: [],
+    affiliations: []
+  };
   public disable: boolean;
   public superheroData: FormGroup = new FormGroup({
     realName: new FormControl(),
